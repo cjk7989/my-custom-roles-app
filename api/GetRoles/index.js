@@ -14,14 +14,10 @@ module.exports = async function (context, req) {
         if (await isUserInGroup(groupId, user.accessToken, context)) {
             roles.push(role);
         }
-        else
-        {
-            roles.push(role);
-        }
     }
 
     context.res.json({
-        roles
+        ['reader', 'authenticated']
     });
 }
 
