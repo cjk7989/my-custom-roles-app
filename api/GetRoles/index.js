@@ -17,7 +17,7 @@ module.exports = async function (context, req) {
     }
 
     context.res.json({
-        ['reader', 'authenticated']
+        roles
     });
 }
 
